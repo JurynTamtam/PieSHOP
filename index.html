@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <title>Pie Shop</title>
+  <link rel="stylesheet" type="text/css" href="shop.css">
+
+  <style>
+      /* homepage style */
+    .grid-container {
+      background-color: rgba(255, 87, 34, 0.8);
+      text-align: center;
+      font-size: 10px;
+      display: grid;
+      grid-template-columns: auto;
+      color: white;
+      padding: 2px;
+    }
+
+    .logo {
+      margin-top: 15px;
+      height: auto;
+      width: 120px;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .title>h1 {
+      margin-top: 20px;
+      font-family: "Georgia", "Courier New", fantasy;
+      font-size: 60px;
+      color: lightgoldenrodyellow;
+          }
+
+    header {
+      background-image: url('https://images3.alphacoders.com/108/1081677.jpg');
+    }
+
+    .footer {
+      background-color: rgba(255, 50, 5, 0.8);
+      color: #ffffff;
+      text-align: center;
+      font-size: 10px;
+      padding: 15px;
+      font-family: "Verdana";
+    }
+
+   
+    /* Responsive Grid */
+    @media only screen and (min-width: 600px) { /* For tablets and larger screens */
+      .grid-container{
+      grid-template-columns: 200px auto 200px 200px;
+      }
+    }
+
+    @media only screen and (max-width: 599px) { /* For smaller screens, like mobile phones */
+      .grid-container{
+        grid-template-columns: auto;
+      }
+    }
+
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+      @media only screen and (max-width: 599px) {
+      .container, .grid-container2, .food-container, .grid-container1{
+        grid-template-columns: 1fr; /* Change to a single column layout */
+      }
+      
+    }
+
+    /* Adjust styles for smaller screens (e.g., mobile phones) */
+    @media only screen and (max-width: 599px) {
+      .container{
+        flex-direction: column;
+      }
+    }
+ div.item1a, .item2, .item3{
+      background-image: url('https://th.bing.com/th/id/OIP.gTye6vgNGF7oBzOmL7NuKAHaGZ?pid=ImgDet&w=539&h=466&rs=1');
+    }
+
+  </style>
+</head>
+
+<body style="background-color:white;">
+  <header>
+    <div class="grid-container">
+      <div>
+        <img src="logo.png" class="logo" alt="subject logo"><br>
+      </div>
+
+      <div class="title">
+        <h1>Pie Shop</h1>
+      </div>
+
+    </div>
+  </header>
+    
+<div class="food-container">
+  
+  <div class="item1">
+
+      
+    <h2>Choose your order</h2>    
+    <h2><b>Flavors</b></h2>
+        <div class="grid-container1">
+          <div class="item1a">
+              <img src="https://th.bing.com/th/id/R.aef65898cd7c41f04d552e7e487c1cd5?rik=KsOSPR4LoTmmCQ&riu=http%3a%2f%2fimages.summitmedia-digital.com%2fyummyph%2fimages%2f2019%2f10%2f15%2fjollibee-buko-pie.jpg&ehk=LM%2feEhhBYxHrSLQN%2b5Mt6ool%2f%2fTKmS3DFoNnbK0QI44%3d&risl=&pid=ImgRaw&r=0" id="flavor0" alt="buko pie" onclick="selectFlavor(0)"> <br>
+                <button onclick="selectFlavor(0)">Buko</button>
+          </div>
+
+          <div class="item2">
+                <img src="https://www.jajaramirez.com/wp-content/uploads/2022/03/44FDC045-3E6A-460F-9860-8AB9B4575689.jpeg" id="flavor1" alt="mango pie" onclick="selectFlavor(1)">
+              <br><button onclick="selectFlavor(1)">Mango</button>
+          </div>
+
+         <div class="item3">
+              <img src="https://2.bp.blogspot.com/-FzavkwCpXic/WwdvbkAPM1I/AAAAAAAAVD4/jb7oG7XIQg8UxpfscI_75y_cW1Lys5mMACLcBGAs/s1600/ube-pie3.jpg" id="flavor2" alt="ube pie" onclick="selectFlavor(2)">
+                  <br><button onclick="selectFlavor(2)">Ube</button>
+         </div>  <br><br>  
+          
+  </div>
+</div>
+
+  <div class="item2">
+      <h2><b>Sizes</b></h2>
+          <div class="size-option" onclick="selectSize(0)">
+            <img src="https://th.bing.com/th/id/OIP.XiFwklSu6IabFsIMqq-mcgHaHa?pid=ImgDet&w=800&h=800&rs=1" alt="Small">
+            <p id="psize" onclick="selectSize(0)">Small - 35.00</p>
+          </div>
+          <div class="size-option" onclick="selectSize(1)">
+            <img src="https://th.bing.com/th/id/OIP.Kw_ec7qR3fcG7GfTiRPCgQHaEK?pid=ImgDet&w=640&h=360&rs=1" alt="Medium">
+            <p id="psize" onclick="selectSize(1)">Medium - 45.00</p>
+          </div>
+          <div class="size-option" onclick="selectSize(2)">
+            <img src="https://img.grouponcdn.com/seocms/2i7116adj14eoCiYBx8SQLUzXZrq/671x671_Apple_Pie_BUYING_GUIDE_DIFFERENT_TYPES_OF_PIE_012319_ak_jpg-671x671" alt="Large">
+            <p id="psize" onclick="selectSize(3)">Large - 140.00</p>
+          </div>
+  </div>  
+
+
+  <div class="item3">
+      
+       <h2><b>Toppings</b></h2>
+       <p>Php 5.00 each</p>
+      <div id="toppings">  
+          <img src="https://th.bing.com/th/id/OIP.akL0gKtk3n0ry0EJy5TGigAAAA?pid=ImgDet&rs=1" alt="Chocolate" onclick="toggleTopping(0)">
+          <p id="psize" onclick="toggleTopping(0)">Chocolate</p>
+      
+          <img src="https://i.pinimg.com/originals/9a/9b/fd/9a9bfdb3c400499d9ce6dc0d28841648.jpg" alt="Sprinkles" onclick="toggleTopping(1)">
+          <p id="psize" onclick="toggleTopping(1)">Sprinkles</p>
+      
+          <img src="https://www.thegunnysack.com/wp-content/uploads/2020/06/Caramel-Syrup-Recipe.jpg" alt="Caramel Syrup" onclick="toggleTopping(2)">
+          <p id="psize" onclick="toggleTopping(2)">Caramel Syrup</p> 
+
+          <img src="https://joaniesimon.com/wp-content/uploads/2016/01/whipped-cream.jpg" alt="Whipped Cream" onclick="toggleTopping(3)">
+          <p id="psize" onclick="toggleTopping(3)">Whipped Cream</p>
+        
+          <img src="https://www.cheatsheet.com/wp-content/uploads/2017/03/GettyImages-508297424.jpg?x33802" alt="Cheese" onclick="toggleTopping(4)">
+          <p id="psize" onclick="toggleTopping(4)">Cheese</p>
+          </div>
+        </div>  
+      <div>
+    </div>
+
+     <div id="order-summary">
+      <h3>Total Price: Php <b><span id="total-price">0.00</span></b></h3>
+      <p><b>Flavor:</b> <span id="flavor-summary">-</span></p>
+      <p><b>Size:</b> <span id="size-summary">-</span></p>
+      <p><b>Toppings: </b><span id="toppings-summary">None</span></p>
+    </div>   
+  </div>
+</div>
+
+  <script>
+    let selectedFlavor = 0;
+    let selectedSize = 0;
+    let selectedToppings = new Array(6).fill(false);
+
+    function selectFlavor(flavor) {
+      selectedFlavor = flavor;
+      updateFlavorImages();
+      calculatePrice();
+      updateOrderSummary();
+    }
+
+    function selectSize(size) {
+      selectedSize = size;
+      updateSizeImages();
+      calculatePrice();
+      updateOrderSummary();
+    }
+
+    function toggleTopping(topping) {
+      selectedToppings[topping] = !selectedToppings[topping];
+      updateToppingsImages();
+      calculatePrice();
+      updateOrderSummary();
+    }
+
+    function updateFlavorImages() {
+      for (let i = 0; i < 3; i++) {
+        const imgElement = document.getElementById(`flavor${i}`);
+        if (i === selectedFlavor) {
+          imgElement.style.border = "2px solid red";
+        } else {
+          imgElement.style.border = "2px solid transparent";
+        }
+      }
+    }
+
+    function updateSizeImages() {
+      const sizeOptions = document.getElementsByClassName("size-option");
+      for (let i = 0; i < sizeOptions.length; i++) {
+        const imgElement = sizeOptions[i].querySelector("img");
+        if (i === selectedSize) {
+          imgElement.style.border = "2px solid red";
+        } else {
+          imgElement.style.border = "2px solid transparent";
+        }
+      }
+    }
+
+    function updateToppingsImages() {
+      const toppingsImages = document.getElementById("toppings").querySelectorAll("img");
+      toppingsImages.forEach((imgElement, i) => {
+        if (selectedToppings[i]) {
+          imgElement.style.border = "2px solid #FF6F61";
+        } else {
+          imgElement.style.border = "2px solid transparent";
+        }
+      });
+    }
+
+    function calculatePrice() {
+      const toppings = selectedToppings.map((topping, index) => topping ? index : -1).filter(index => index !== -1);
+      const sizePrice = [35.00, 45.00, 140.00][selectedSize];
+      const toppingsPrice = toppings.reduce((total, topping) => total + [5, 5, 5, 5, 5, 5][topping], 0);
+
+      const totalPrice = sizePrice + toppingsPrice;
+      document.getElementById("total-price").textContent =totalPrice.toFixed(2);
+    }
+
+    function updateOrderSummary() {
+      const flavorNames = ["Buko Pie", "Mango Pie", "Ube Pie"];
+      const sizeNames = ["Small", "Medium", "Large"];
+
+      document.getElementById("flavor-summary").textContent = flavorNames[selectedFlavor];
+      document.getElementById("size-summary").textContent = sizeNames[selectedSize];
+
+      const selectedToppingsNames = selectedToppings
+        .map((topping, index) => topping ? document.getElementById("toppings").querySelectorAll("p")[index].textContent : null)
+        .filter(name => name !== null);
+
+      if (selectedToppingsNames.length === 0) {
+        document.getElementById("toppings-summary").textContent = "None";
+      } else {
+        document.getElementById("toppings-summary").textContent = selectedToppingsNames.join(", ");
+      }
+    }
+
+    // Initial setup
+    updateFlavorImages();
+    updateSizeImages();
+    updateToppingsImages();
+    updateOrderSummary();
+  </script>
+
+  <div id="Tab4" class="w3-container tab" style="display:none"></div>
+
+
+  <script>
+    function opentab(openit) {
+      var i;
+      var x = document.getElementsByClassName("tab");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      document.getElementById(openit).style.display = "block";
+    }
+  </script>
+
+  <footer class="footer">
+    <div>
+      <h3>Instructor: Jim-mar Delos Reyes</h3>
+    </div>
+  </footer>
+</body>
+
+</html>
